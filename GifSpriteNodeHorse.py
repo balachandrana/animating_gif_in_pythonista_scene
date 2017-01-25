@@ -51,7 +51,7 @@ class GifSpriteNode(scene.SpriteNode):
 
     def update(self, dt):
         self.current_duration -= dt
-        if self.current_duration >= 0:
+        if self.current_duration > 0:
             return
         self.texture, self.current_duration = next(self.preloaded_textures)
 
